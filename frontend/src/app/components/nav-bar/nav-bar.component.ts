@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamsService } from 'src/app/services/teams.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  teamList: any[];
+
+  constructor(private teamsService: TeamsService) { }
 
   ngOnInit(): void {
+    this.teamsService.getAllTeams().subscribe(data => {
+      this.teamList = data;
+    });
   }
 
 }

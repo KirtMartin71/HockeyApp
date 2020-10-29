@@ -15,7 +15,6 @@ export class TeamsComponent implements OnInit {
   ngOnInit(): void {
     this.teamsService.getAllTeams().subscribe(data => {
       this.teamList = data;
-      console.log(this.teamList);
     });
   }
 

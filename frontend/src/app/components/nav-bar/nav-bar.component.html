@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: black;">
   <a class="navbar-brand" href="#">
-    <img src="../../assets/nhl.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="../../assets/nhl.svg" class="d-inline-block align-top" height="30px" width="30px" alt="" loading="lazy">
     Hockey App
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,15 +16,11 @@
           Teams
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">
-            Bruins
+          <div *ngFor="let team of teamList">
+          <a class="dropdown-item" routerLink="/roster/{{team.id}}">
+            {{team.city}} {{team.name}} Roster
           </a>
-          <a class="dropdown-item" href="#">
-            Red Wings
-          </a>
-          <a class="dropdown-item" href="#">
-            Lightning
-          </a>
+          </div>
         </div>
       </li>
     </ul>

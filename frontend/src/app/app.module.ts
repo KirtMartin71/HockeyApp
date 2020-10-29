@@ -13,7 +13,8 @@ import { PlayerComponent } from './components/player/player.component';
 
 const appRoutes: Routes = [
   {path: '', component: TeamsComponent},
-  {path: 'roster/:id', component: RosterComponent}
+  {path: 'roster/:id', component: RosterComponent},
+  {path: 'player/:id', component: PlayerComponent}
 ]
 
 @NgModule({
