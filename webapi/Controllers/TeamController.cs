@@ -19,16 +19,16 @@ namespace webapi.Controllers
         }
 
         [HttpGet("")]
-        public async Task<IActionResult> GetTeams()
-        {
-            var team = await dc.Teams.ToListAsync();
-
-            if ( team == null ) {
-                return NotFound();
-            }
-
-            return Ok(team);
+        public async Task<IEnumerable<Team>> GetTeams(){
+           
+            List<Team> teams = await
+                (from p in dc.Teams
+                    orderby p.city, p.name
+                    select p).ToListAsync();
+            
+            return teams;   
         }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTeamById(int id)
