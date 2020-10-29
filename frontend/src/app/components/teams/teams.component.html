@@ -1,22 +1,17 @@
 <div class="container">
-  <div class="row row-cols-1 row-cols-md-2">
-    <div class="col mb-4">
-      <div class="card shadow-lg p-2" style="width: 18rem;">
-        <img src="../../assets/bruins.svg" width="80" height="80" class="card-img-top" alt="...">
+  <div class="row">
+
+    <div class="col" *ngFor="let team of teamList">
+
+      <div class="card text-center shadow-lg p-2 mb-5" style="width: 18rem;">
+        <img src="../../assets/{{team.picture}}" style="width: 70%; height: 70%;" class="card-img-top rounded mx-auto d-block" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Boston Bruins</h5>
-          <a href="#" class="btn btn-primary">View Roster</a>
+          <h5 class="card-title">{{team.city}} {{team.name}}</h5>
+          <button class="btn btn-primary" routerLink="/roster/{{team.id}}">View Roster</button>
         </div>
       </div>
+
     </div>
-    <div class="col mb-4">
-      <div class="card shadow-lg p-2" style="width: 18rem;">
-        <img src="../../assets/redwings.svg" width="80" height="80" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Detroit Red Wings</h5>
-          <a href="#" class="btn btn-primary">View Roster</a>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>

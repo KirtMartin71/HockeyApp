@@ -1,12 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Hockey App</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="../../assets/nhl.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Hockey App
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -14,16 +17,13 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">
-            <img src="../../assets/bruins.svg" width="20" height="20" class="d-inline-block" alt="" loading="lazy">
             Bruins
           </a>
           <a class="dropdown-item" href="#">
-            <img src="../../assets/lightning.png" width="20" height="20" class="d-inline-block" alt="" loading="lazy">
-            Lightning
+            Red Wings
           </a>
           <a class="dropdown-item" href="#">
-            <img src="../../assets/redwings.svg" width="20" height="20" class="d-inline-block" alt="" loading="lazy">
-            Red Wings
+            Lightning
           </a>
         </div>
       </li>
