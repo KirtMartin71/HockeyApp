@@ -17,8 +17,8 @@ export class TeamsComponent implements OnInit {
   ngOnInit(): void {
     this.teamsService.getAllTeams().subscribe(data => {
       this.teamList = data;
-      this.missingCardsForRow = (Math.ceil(this.teamList.length / 3) * 3) - this.teamList.length;
     });
+    this.missingCardsForRow = (Math.ceil(this.teamList.length / 3) * 3) - this.teamList.length;
   }
 
 }

@@ -1,3 +1,40 @@
 <div class="container">
-  Team ID: {{teamId}}
+  <h1>
+    <img src="../../assets/{{team.picture}}" style="width: 10%; height: 10%;" class="card-img-top" alt="...">
+    {{team.city}} {{team.name}}
+  </h1>
 </div>
+<table class="table table-striped table-hover shadow-lg">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Position</th>
+      <th scope="col">Player Card</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">71</th>
+      <td>Dylan</td>
+      <td>Larkin</td>
+      <td>C</td>
+      <td><button class="btn btn-primary btn-sm">View Player Card</button></td>
+    </tr>
+    <tr>
+      <th scope="row">39</th>
+      <td>Anthony</td>
+      <td>Mantha</td>
+      <td>LW</td>
+      <td><button class="btn btn-primary btn-sm">View Player Card</button></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td>Robbi</td>
+      <td>Fabri</td>
+      <td>RW</td>
+      <td><button class="btn btn-primary btn-sm">View Player Card</button></td>
+    </tr>
+  </tbody>
+</table>
